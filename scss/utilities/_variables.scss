@@ -1,0 +1,50 @@
+// image variables
+
+
+// color variables
+
+
+$alabaster-background: #FAfafa;
+$turquoise-blue: #61CDED;
+$mountain-meadow: #20CF74;
+$contessa: #CF7872;
+$jaffa: #EE7C49;
+$wisteria: #9D70BD;
+$sea-spray: #6BE6C0;
+$boston-blue: #3F96AB;
+$malibu: #75E2FA;
+$perfume:#F3B9f8;
+$vista: #7BBD9F;
+$orchid: #D00A91;
+$apricot: #EB9373;
+
+
+// dominant color scheme
+$color-primary:$alabaster-background;
+$color-secondary: $sea-spray;
+$color-accent: $turquoise-blue;
+
+// ui colors
+//create color map for buttons
+$ui-colors: (
+    default: $turquoise-blue,
+    success: $mountain-meadow,
+    error: $contessa,
+    warning: $jaffa,
+    info: $wisteria
+);
+// grid variables
+
+$grid-col-width: 65px;
+$grid-gutter-width: 20px;
+$grid-col-count: 12;
+$grid-container-mxwdth: 1400px; 
+
+
+// breakpoint variables
+$breakpoint-small:1px;
+$breakpoint-large:1400px; 
+
+
+// fontsize
+$base__fontsize :16px;
