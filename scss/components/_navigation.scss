@@ -1,0 +1,26 @@
+.grid__row
+.nav{
+display:flex;
+flex-direction:column;
+
+@extend %center;
+    @include media-qry(large){
+        @include flex-container($flex-dir: row);
+                 
+         /*   &item {
+                @include flex-container($display: inline-flex);
+                
+                 
+            }  */
+    } 
+};
+.img--logo{
+    margin-right:auto;
+}
+.grid__col--3{
+    @extend %center;
+}
+
+a{
+    @include spacing;
+}

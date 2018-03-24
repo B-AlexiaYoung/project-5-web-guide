@@ -1,0 +1,14 @@
+button{
+    @include flex-container($flex-dir:column);
+    width: $btn-w;
+    margin: 0 auto;
+    @include media-qry(medium){
+        @include flex-container($display: inline-flex, $flex-dir: row); 
+       
+    };
+    @include media-qry(large){
+    @include flex-container($display: inline-flex, $flex-dir: row); 
+    width: ($btn-w / 5)
+    
+    };
+}

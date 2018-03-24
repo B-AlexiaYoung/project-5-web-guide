@@ -1,6 +1,10 @@
 // image styling
 
 .img--logo{
-    display: block;
+    display: inline-block;
     padding: 5px;
+     
+    @include media-qry(large){
+        margin-right: auto;
+    }
 };

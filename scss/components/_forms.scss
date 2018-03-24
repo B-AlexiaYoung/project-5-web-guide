@@ -1,0 +1,6 @@
+.form{
+
+    @include flex-container($display:inline-flex, $flex-dir: column, $justify: flex-end);
+    margin:0 auto;
+    
+}

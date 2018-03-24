@@ -17,7 +17,23 @@ $perfume:#F3B9f8;
 $vista: #7BBD9F;
 $orchid: #D00A91;
 $apricot: #EB9373;
+// grid colors map
 
+ $colours: (
+    default: $turquoise-blue,
+    success: $mountain-meadow,
+    error: $contessa,
+    warning: $jaffa,
+    info: $wisteria,  
+    3: $wisteria,
+    4: $turquoise-blue,
+    5: $mountain-meadow,
+    6: $boston-blue,
+    7: $contessa,
+    8: $jaffa,
+    12: $malibu,
+
+);
 
 // dominant color scheme
 $color-primary:$alabaster-background;
@@ -26,25 +42,36 @@ $color-accent: $turquoise-blue;
 
 // ui colors
 //create color map for buttons
-$ui-colors: (
+/*  $ui-colors: (
     default: $turquoise-blue,
     success: $mountain-meadow,
     error: $contessa,
     warning: $jaffa,
-    info: $wisteria
-);
+    info: $wisteria,   
+    
+);    */
 // grid variables
 
 $grid-col-width: 65px;
-$grid-gutter-width: 20px;
+$grid-gutter-width: 30px;
 $grid-col-count: 12;
 $grid-container-mxwdth: 1400px; 
 
 
-// breakpoint variables
+// breakpoint variables  small, medium, large screens
 $breakpoint-small:1px;
-$breakpoint-large:1400px; 
+$breakpoint-medium: 769px;
+$breakpoint-large: 1100px; 
 
 
 // fontsize
 $base__fontsize :16px;
+
+// nav spacing variables
+$nav-pad-top: 10px;
+$nav-pad-left: 10px;
+$nav-pad-right: 10px;
+
+
+// button width variable
+$btn-w: 95vw;
