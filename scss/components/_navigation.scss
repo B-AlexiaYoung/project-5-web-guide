@@ -4,6 +4,10 @@
 @include flex-container($flex-dir:column);
 
 @extend %center;
+@include media-qry(medium){
+    @include flex-container($flex-dir: row, $justify: flex-end);
+ 
+}
     @include media-qry(large){
         @include flex-container($flex-dir: row, $justify: center);
          /*   &item {
@@ -14,7 +18,8 @@
     } 
 };
 .img--logo{
-    margin-right:auto;
+    @include media-qry(medium){
+    margin-right:auto;}
 }
 
 
@@ -23,7 +28,12 @@ a{
     
 }
 .link{
+    @include media-qry(small){
     color:$turquoise-blue;
+    margin: auto;}
+    @include media-qry(medium){
+        margin-left: 2em;
+    }
 }
 .nav__item{
     border-radius: $bdr-radius;

@@ -1,21 +1,22 @@
-button{
+
+.btn--default.theme__colors,
+.btn--success.theme__colors,
+.btn--error.theme__colors,
+.btn--warning.theme__colors,
+.btn--info.theme__colors,{                        
     border-radius:$bdr-radius;
     font-size: 1.5em;
     @include remove-border;
     margin-bottom:$mrgn-bottom;
     color:$alabaster-background;
     @include media-qry(small){
-    @include flex-container($flex-dir:column, $justify:center, $align-items:center);
+    @include flex-container($flex-dir:column, $justify:center, $align-items:left);
     width: $btn-w;
 
 }
-@include media-qry(medium){
-    @include flex-container($display: inline-flex, $flex-dir: row); 
-    padding: em(20px) em(20px) em(20px) em(20px);
 
-};
     @include media-qry(large){
-    @include flex-container($display: inline-flex, $flex-dir: row); 
+    @include flex-container($display: inline-flex, $flex-dir: row, $align-items:center); 
     width: ($btn-w / 6.3);
     padding: em(10px) em(20px) em(10px) em(20px);
     @include doubly;

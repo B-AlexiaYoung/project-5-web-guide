@@ -10,7 +10,7 @@
         margin-right:$mrgn-right;
     }
     //padding: 0 em(20px) em(50px) em(20px);
-    @include media-qry(medium){
+    @include media-qry(large){
         margin-left: 75px;
         margin-right: 75px;
     };
@@ -26,7 +26,7 @@
         line-height:2em;
         border-radius:$bdr-radius;
     }
-        @include media-qry(medium){
+        @include media-qry(large){
         @include flex-container($flex-dir: row);
         text-align:center;
         }
@@ -36,6 +36,10 @@
     padding-left:$nav-pad-left;
 
 }
+
+ div.grid__col--3{ display:inline-flex;
+}
+
 .button{
     div.grid__col--12 &{
         @include flex-container($justify:space-around);
@@ -53,7 +57,7 @@
     @for $i from 1 through $grid-col-count{
         .grid__col--#{$i}{
         width: 100%;
-        text-align:center;
+        text-align:left;
 
         }
     }
@@ -65,6 +69,7 @@
         $target: ($grid-col-width * $i) + ($grid-gutter-width * ($i - 1));
             .grid__col--#{$i}  {
             width: percentage($target / $context);
+            text-align:center;
             }  
     }
 };  
@@ -91,7 +96,7 @@
         @include flex-container($justify: flex-start)
 
         }
-    @include media-qry(medium){   
+    @include media-qry(large){   
         @include flex-container($justify:center);
         }
 };
