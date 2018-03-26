@@ -43,16 +43,7 @@ $color-primary:$alabaster-background;
 $color-secondary: $sea-spray;
 $color-accent: $turquoise-blue;
 
-// ui colors
-//create color map for buttons
-/*  $ui-colors: (
-    default: $turquoise-blue,
-    success: $mountain-meadow,
-    error: $contessa,
-    warning: $jaffa,
-    info: $wisteria,   
-    
-);    */
+
 // grid variables
 
 $grid-col-width: 65px;
@@ -84,7 +75,7 @@ $btn-w: 100vw;
 
 $bdr-radius:5px;
 
-// margin variables;
+// margin and padding variables;
 $mrgn-top: 10px;
 $mrgn-bottom: 10px;
 $mrgn-left: 10px;

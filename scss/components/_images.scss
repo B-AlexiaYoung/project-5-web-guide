@@ -12,3 +12,6 @@
     display: block;
     margin:auto;
 }
+.img--frame{
+@include flex-container($display:flex); 
+margin:auto;}

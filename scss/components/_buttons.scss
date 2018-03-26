@@ -4,17 +4,16 @@ button{
     @include remove-border;
     margin-bottom:$mrgn-bottom;
     color:$alabaster-background;
-@include media-qry(small){
+    @include media-qry(small){
     @include flex-container($flex-dir:column, $justify:center, $align-items:center);
     width: $btn-w;
-    
-}
-    //margin:  auto;
-    @include media-qry(medium){
-        @include flex-container($display: inline-flex, $flex-dir: row); 
-        padding: em(20px) em(20px) em(20px) em(20px);
 
-    };
+}
+@include media-qry(medium){
+    @include flex-container($display: inline-flex, $flex-dir: row); 
+    padding: em(20px) em(20px) em(20px) em(20px);
+
+};
     @include media-qry(large){
     @include flex-container($display: inline-flex, $flex-dir: row); 
     width: ($btn-w / 6.3);

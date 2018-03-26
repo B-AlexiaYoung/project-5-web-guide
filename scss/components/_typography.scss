@@ -10,13 +10,13 @@ font: $font-stack;
 }
 .headline--primary{
     @include media-qry(small){
-    color:$color-secondary;
-    margin-top: $mrgn-top;
-    margin-bottom: $mrgn-bottom;
-    margin-left: 30px;
-    margin-right: 40px;
-    text-align:left;
-    font-size: 2em;
+        color:$color-secondary;
+        margin-top: $mrgn-top;
+        margin-bottom: $mrgn-bottom;
+        margin-left: 30px;
+        margin-right: 40px;
+        text-align:left;
+        font-size: 2em;
 }
 @include media-qry(medium){
     margin-left:30px;
@@ -29,7 +29,7 @@ font: $font-stack;
 .blockquote{
     @include media-qry(small){
     border-left: 3px solid $color-secondary;
-   margin: 20px;
+    margin: 20px;
     font-size: 1.5em;
     padding-left: 30px;
     padding-right: 40px;
@@ -47,20 +47,20 @@ font: $font-stack;
 
 .card{
     @include flex-container($display: inline-flex, $flex-dir:column);
-p{
-        text-align:left;
-        padding-left: $nav-pad-left;
-        
+    p{
+            text-align:left;
+            padding-left: $nav-pad-left;
+            
+        }
+    
     }
-   
-}
 
 .headline--secondary{
     @include media-qry(small){    
     display: block; 
     text-align: left;
     padding-left:$mrgn-left;
-}
+    }
 }
 .card{
     @include flex-container($display: flex, $flex-dir:column);

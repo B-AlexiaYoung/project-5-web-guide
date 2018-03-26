@@ -1,21 +1,17 @@
-// mixin for generating background colors for buttons.
-// @each $theme, $color in $ui-colors{
- //   .btn--#{$theme}{
- //           background-color:$color;    
-  //  }
-//};   
+;   
 
 
 // mixin for generating background for grid background colors then button background colors.
 @mixin gd_colors{
-@each $theme, $color in $colours{
-.grid__col--#{$theme}.theme__colors{
-        background-color:$color;
-        border-radius:$bdr-radius;
-    } 
-};
+    @each $theme, $color in $colours{
+        .grid__col--#{$theme}.theme__colors{
+                background-color:$color;
+                border-radius:$bdr-radius;
+            } 
+    };
  
 };
+// generate button colors
 @mixin btn_colors{
 @each $theme, $color in $btn_colors{
  .btn--#{$theme}.theme__colors{
@@ -36,18 +32,17 @@
 
 // mixin media query breakpoints  breakpoint variables set at 1px,769px and 1110px respectively.
 @mixin media-qry($break){
-@if $break == "small"{
-    @media(min-width: $breakpoint-small){
-     // @include gd-colors; 
-       @content;
-        
+    @if $break == "small"{
+        @media(min-width: $breakpoint-small){
+        // @include gd-colors; 
+        @content;
     }
 }
 @else if $break =="medium"{
- @media(min-width: $breakpoint-medium){
+     @media(min-width: $breakpoint-medium){
     //@include gd-colors;
      @content;
- }
+    }
 }
 @else if $break == "large"{
     @media(min-width: $breakpoint-large){
@@ -65,9 +60,9 @@
 // mixin for nav items spacing 
 
 @mixin spacing{
-padding-top: $nav-pad-top;
-padding-left: $nav-pad-left;
-padding-right: $nav-pad-right;
+    padding-top: $nav-pad-top;
+    padding-left: $nav-pad-left;
+    padding-right: $nav-pad-right;
 };
 
 // mixin to create flex container

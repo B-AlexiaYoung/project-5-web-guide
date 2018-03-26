@@ -1,25 +1,7 @@
-/*  $ui-colors: (
-    default: $turquoise-blue,
-    success: $mountain-meadow,
-    error: $contessa,
-    warning: $jaffa,
-    info: $wisteria,   
-    
-);    */
-/*    % col{
-float: left;
-padding: 0 10px;
-margin-left: 2%;
-};   */
 .grid__row
 .nav {
   text-align: center; }
 
-/*%column{  // include this in utilites extends partial
-    float:left;
-    padding: 0 10px;
-    margin-left: 2%;
-}  */
 /* 
 Shaun Inman's CSS Reset
 https://perishablepress.com/press/2007/10/23/a-killer-collection-of-global-css-reset-styles/
@@ -56,6 +38,10 @@ q:before, q:after {
 
 a, ins {
   text-decoration: none; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 @media (min-width: 1px) {
   .container {
@@ -101,49 +87,54 @@ div.grid__col--12 .button {
   display: flex;
   justify-content: space-around; }
 
-  /*   @include media-qry(large)
-// grid columns calculation
-    .grid__col{
-        @include media-qry(large){
-            @include grid-columns;
-        }
-}       */
 @media (min-width: 1px) {
   .grid__col--1 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--2 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--3 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--4 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--5 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--6 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--7 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--8 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--9 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--10 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--11 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--12 {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
 
   .grid__col--3.theme__colors {
     background-color: #9D70BD;
@@ -295,6 +286,10 @@ form.btn--default.theme__colors {
 
 .img--avatar {
   display: block;
+  margin: auto; }
+
+.img--frame {
+  display: flex;
   margin: auto; }
 
 .grid__row
