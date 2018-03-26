@@ -1,14 +1,25 @@
 button{
-    @include flex-container($flex-dir:column);
+    border-radius:$bdr-radius;
+    font-size: 1.5em;
+    @include remove-border;
+    margin-bottom:$mrgn-bottom;
+    color:$alabaster-background;
+@include media-qry(small){
+    @include flex-container($flex-dir:column, $justify:center, $align-items:center);
     width: $btn-w;
-    margin: 0 auto;
+    
+}
+    //margin:  auto;
     @include media-qry(medium){
         @include flex-container($display: inline-flex, $flex-dir: row); 
-       
+        padding: em(20px) em(20px) em(20px) em(20px);
+
     };
     @include media-qry(large){
     @include flex-container($display: inline-flex, $flex-dir: row); 
-    width: ($btn-w / 5)
-    
+    width: ($btn-w / 6.3);
+    padding: em(10px) em(20px) em(10px) em(20px);
+    @include doubly;
+
     };
 }

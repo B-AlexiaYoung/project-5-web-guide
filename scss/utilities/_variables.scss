@@ -1,4 +1,5 @@
-// image variables
+// font variables
+$font-stack :"Helvetica Neue, Helvetica, Liberation Sans, Arial, sans-serif";
 
 
 // color variables
@@ -18,20 +19,22 @@ $vista: #7BBD9F;
 $orchid: #D00A91;
 $apricot: #EB9373;
 // grid colors map
-
- $colours: (
-    default: $turquoise-blue,
-    success: $mountain-meadow,
-    error: $contessa,
-    warning: $jaffa,
-    info: $wisteria,  
+$btn_colors:(
+    'default': $turquoise-blue,
+    'success': $mountain-meadow,
+    'error': $contessa,
+    'warning': $jaffa,
+    'info': $wisteria,  
+);
+ $colours:(
+    
     3: $wisteria,
     4: $turquoise-blue,
     5: $mountain-meadow,
     6: $boston-blue,
     7: $contessa,
     8: $jaffa,
-    12: $malibu,
+    12: $vista,
 
 );
 
@@ -71,7 +74,24 @@ $base__fontsize :16px;
 $nav-pad-top: 10px;
 $nav-pad-left: 10px;
 $nav-pad-right: 10px;
+$nav-pad-right:10px;
 
 
 // button width variable
-$btn-w: 95vw;
+$btn-w: 100vw;
+
+// border-radious
+
+$bdr-radius:5px;
+
+// margin variables;
+$mrgn-top: 10px;
+$mrgn-bottom: 10px;
+$mrgn-left: 10px;
+$mrgn-right: 10px;
+
+
+$pd-left: 5px;
+$pd-right: 5x;
+$pd-top: 5px;
+$pd-bottom: 5px;

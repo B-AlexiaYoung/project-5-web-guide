@@ -1,12 +1,11 @@
 .grid__row
 .nav{
-display:flex;
-flex-direction:column;
+    @include media-qry(small){}
+@include flex-container($flex-dir:column);
 
 @extend %center;
     @include media-qry(large){
-        @include flex-container($flex-dir: row);
-                 
+        @include flex-container($flex-dir: row, $justify: center);
          /*   &item {
                 @include flex-container($display: inline-flex);
                 
@@ -17,10 +16,19 @@ flex-direction:column;
 .img--logo{
     margin-right:auto;
 }
-.grid__col--3{
-    @extend %center;
-}
+
 
 a{
     @include spacing;
+    
+}
+.link{
+    color:$turquoise-blue;
+}
+.nav__item{
+    border-radius: $bdr-radius;
+    margin-top:$mrgn-top;
+    &:hover {
+        background-color: $color-secondary;
+    }
 }

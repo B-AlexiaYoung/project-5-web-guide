@@ -4,3 +4,24 @@
     margin:0 auto;
     
 }
+.form__input{
+    border-bottom: 4px solid $color-secondary;
+    padding-top:$pd-top;
+    padding-bottom:$pd-bottom;
+    margin-top:$mrgn-top;
+    margin-bottom:$mrgn-bottom;
+    border-top: none;
+    border-left:none;
+    border-right:none;
+}
+
+form.btn--default.theme__colors{
+    background-color: $color-secondary;
+    border-radius: $bdr-radius;
+    padding-top: $pd-top;
+    margin-top: $mrgn-top;
+    margin:auto;
+}
+.form__label--hidden{
+    display: none;
+}

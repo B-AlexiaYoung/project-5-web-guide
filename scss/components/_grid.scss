@@ -2,12 +2,46 @@
 
 // page containing div
 .container{
+    @include media-qry(small){
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 em(20px) em(50px) em(20px);
+        @include btn_colors;
+        margin-left:$mrgn-left;
+        margin-right:$mrgn-right;
+}
+    //padding: 0 em(20px) em(50px) em(20px);
+    @include media-qry(medium){
+        margin-left: 75px;
+        margin-right: 75px;
+    };
 
 };
-    %column{  // include this in utilites extends partial
+
+.grid__row{
+    @include media-qry(small){
+    @include flex-container($flex-dir:column,$justify:center);
+    text-align: left;
+    padding-top:$pd-top;
+    padding-bottom:$pd-bottom;
+    line-height:2em;
+    border-radius:$bdr-radius;
+    }
+    @include media-qry(medium){
+        @include flex-container($flex-dir: row);
+        text-align:center;
+    }
+}
+.grid__row +.theme_colors{
+    
+        padding-left:$nav-pad-left;
+    
+}
+.button{
+    div.grid__col--12 &{
+         @include flex-container($justify:space-around);
+        }
+}
+%column{  // include this in utilites extends partial
     float:left;
     padding: 0 10px;
     margin-left: 2%;
@@ -21,6 +55,15 @@
         }
 }       */
 
+@include media-qry(small){
+    @for $i from 1 through $grid-col-count{
+        .grid__col--#{$i}{
+            width: 100%;
+            
+        }
+    }
+    @include gd_colors;
+}
 @include media-qry(large){ 
     @for $i from 1 through $grid-col-count {
             $context: grid-context($grid-col-width, $grid-col-count, $grid-gutter-width) !global;
@@ -37,16 +80,31 @@
    @media (min-width: 1px){      
        margin-top:em(12px);
        margin-bottom:em(12px);
+       // @include gd-colors; 
+
    };
   @include media-qry(large){
       @include doubly(percentage($grid-gutter-width / $context));
-       @include gd-colors; 
+      // @include gd-colors; 
        float: left;
        min-height:1px;
-       padding-left: 10px;
-       padding-right:10px;
+       //padding-left: 10px;
+       //padding-right:10px;
        &:last-of-type{  //last column will float right
          float:right;  
        }
    }
 };     
+
+.grid__col--#{7}.theme__colors.centered{
+    @include media-qry(small){
+        @include flex-container($justify: flex-start)
+
+    }
+    @include media-qry(medium){   
+    @include flex-container($justify:center);
+    }
+   // margin: auto;
+};
+    
+//};

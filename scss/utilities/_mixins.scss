@@ -7,18 +7,22 @@
 
 
 // mixin for generating background for grid background colors then button background colors.
-@mixin gd-colors{
+@mixin gd_colors{
 @each $theme, $color in $colours{
- .theme__colors.grid__col--#{$theme}{
-        background-color:$color
+.grid__col--#{$theme}.theme__colors{
+        background-color:$color;
+        border-radius:$bdr-radius;
     } 
 };
- @each $theme, $color in $colours{
- .theme__colors.btn--#{$theme}{
+ 
+};
+@mixin btn_colors{
+@each $theme, $color in $btn_colors{
+ .btn--#{$theme}.theme__colors{
          background-color:$color;
             }
 }
-};
+}
 // mixin for calulating column widths
 
 // adjacent sibling margins
@@ -34,20 +38,20 @@
 @mixin media-qry($break){
 @if $break == "small"{
     @media(min-width: $breakpoint-small){
-      @include gd-colors; 
+     // @include gd-colors; 
        @content;
         
     }
 }
 @else if $break =="medium"{
  @media(min-width: $breakpoint-medium){
-    @include gd-colors;
+    //@include gd-colors;
      @content;
  }
 }
 @else if $break == "large"{
     @media(min-width: $breakpoint-large){
-        @include gd-colors;
+        //@include gd-colors;
         
         @content;
     }
@@ -73,9 +77,18 @@ padding-right: $nav-pad-right;
     $display:flex,
     $flex-dir:null,
     $wrap:null,
-    $justify:null){
+    $justify:null,
+    $align-items:null){
         display: $display;
         flex-direction: $flex-dir;
         flex-wrap: $wrap;
         justify-content: $justify;
+        align-items: $align-items;
         };
+
+@mixin remove-border{
+    border-left:none;
+    border-top:none;
+    border-right:none;
+    border-bottom:none;
+}

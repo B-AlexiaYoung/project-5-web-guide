@@ -1,4 +1,48 @@
+h1, h4, p{
+font: $font-stack;
+}
+
+.headline--secondary{
+    
+    margin-top: $mrgn-top;
+    margin-bottom: $mrgn-bottom;
+
+}
+.headline--primary{
+    @include media-qry(small){
+    color:$color-secondary;
+    margin-top: $mrgn-top;
+    margin-bottom: $mrgn-bottom;
+    margin-left: 30px;
+    margin-right: 40px;
+    text-align:left;
+    font-size: 2em;
+}
+@include media-qry(medium){
+    margin-left:30px;
+    font-size: 2em;
+
+}
+}
 // card class includes styling for paragraphs
+
+.blockquote{
+    @include media-qry(small){
+    border-left: 3px solid $color-secondary;
+   margin: 20px;
+    font-size: 1.5em;
+    padding-left: 30px;
+    padding-right: 40px;
+    text-align: left;
+    font-style: italic;
+    font-weight: 300;
+    }
+    @include media-qry(medium){
+        font-size: 2.5em;
+        line-height:1em;
+ 
+    }
+}
 
 
 .card{
@@ -12,5 +56,12 @@ p{
 }
 
 .headline--secondary{
-    display: block;
+    @include media-qry(small){    
+    display: block; 
+    text-align: left;
+    padding-left:$mrgn-left;
+}
+}
+.card{
+    @include flex-container($display: flex, $flex-dir:column);
 }
