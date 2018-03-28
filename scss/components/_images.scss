@@ -11,7 +11,10 @@
 .img--avatar{
     display: block;
     margin:auto;
+    padding:10px;
+    box-sizing:border-box;
 }
 .img--frame{
 @include flex-container($display:flex); 
+padding:10px;
 margin:auto;}

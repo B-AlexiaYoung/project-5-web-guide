@@ -15,7 +15,7 @@
 
 }
 
-    @include media-qry(large){
+    @include media-qry(medium){
     @include flex-container($display: inline-flex, $flex-dir: row, $align-items:center); 
     width: ($btn-w / 6.3);
     padding: em(10px) em(20px) em(10px) em(20px);
@@ -23,3 +23,10 @@
 
     };
 }
+/*.btn--default,
+.btn-success,
+.btn-error,
+.btn-warning,
+.btn-info{
+    width:100vw;
+}  */

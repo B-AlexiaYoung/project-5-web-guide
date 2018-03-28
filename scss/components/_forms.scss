@@ -1,8 +1,9 @@
 .form{
 
-    @include flex-container($display:inline-flex, $flex-dir: column, $justify: flex-end);
-    margin:0 auto;
-    
+    @include flex-container( $flex-dir: column, $justify: flex-end);
+    @include media-qry(medium){
+        width:20vw;
+    }
 }
 .form__input{
     border-bottom: 4px solid $color-secondary;
@@ -13,6 +14,16 @@
     border-top: none;
     border-left:none;
     border-right:none;
+    @include media-qry(medium){
+        display:block;
+        width:25vw;
+        //box-sizing:border-box;
+        margin-left:10px;
+    @include media-qry(large){
+        width:20vw;
+
+    }
+    }
 }
 
 form.btn--default.theme__colors{
@@ -21,6 +32,9 @@ form.btn--default.theme__colors{
     padding-top: $pd-top;
     margin-top: $mrgn-top;
     margin:auto;
+    width:35vw;
+    box-sizing:border-box;
+    margin-left: 30px;
 }
 .form__label--hidden{
     display: none;

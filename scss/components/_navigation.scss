@@ -1,13 +1,24 @@
+@mixin clearfix{
+    &:after {
+        content: "";
+        display:table;
+        clear: both;
+    }
+}
+
+
 .grid__row
 .nav{
     @include media-qry(small){}
 @include flex-container($flex-dir:column);
-
+font-family:$font-stack;
 @extend %center;
-@include media-qry(medium){
+ @include media-qry(medium){
     @include flex-container($flex-dir: row, $justify: flex-end);
- 
-}
+    
+    
+};  
+
     @include media-qry(large){
         @include flex-container($flex-dir: row, $justify: center);
          /*   &item {
@@ -16,13 +27,24 @@
                  
             }  */
     } 
+
 };
+
 .img--logo{
     @include media-qry(medium){
-    margin-right:auto;}
+    margin-right:auto}
+};
+
+/*.card{
+@include media-qry(small){
+    @include flex-container($flex-dir:column);
+}
+@include media-qry(large){
+    @include flex-container($flex-dir:row);
 }
 
 
+};  */
 a{
     @include spacing;
     
@@ -34,10 +56,10 @@ a{
     @include media-qry(medium){
         margin-left: 2em;
     }
-}
+};
 .nav__item{
     border-radius: $bdr-radius;
-    margin-top:$mrgn-top;
+    margin-top:2em;;
     &:hover {
         background-color: $color-secondary;
     }

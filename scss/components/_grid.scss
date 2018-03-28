@@ -3,16 +3,17 @@
 // page containing div
 .container{
     @include media-qry(small){
-        max-width: 1400px;
-        margin: 0 auto;
+        margin: auto;
         @include btn_colors;
         margin-left:$mrgn-left;
         margin-right:$mrgn-right;
+        text-align:center;
     }
     //padding: 0 em(20px) em(50px) em(20px);
     @include media-qry(large){
         margin-left: 75px;
         margin-right: 75px;
+        width:100vw;
     };
 
 };
@@ -26,20 +27,32 @@
         line-height:2em;
         border-radius:$bdr-radius;
     }
+    @include media-qry(medium){
+        @include flex-container($display:flex,$flex-dir: row);
+        flex-wrap:wrap;
+        //flex-grow:1;
+    }
         @include media-qry(large){
         @include flex-container($flex-dir: row);
         text-align:center;
+        flex-wrap:nowrap;
+        
         }
 }
 .grid__row +.theme_colors{
-
+    
     padding-left:$nav-pad-left;
 
 }
 
- div.grid__col--3{ display:inline-flex;
-}
+ .grid__col--3{ 
+     .link{
+         @include flex-container($display:flex, $flex-dir:row, $justify:center);
+     }
+    }
 
+
+   
 .button{
     div.grid__col--12 &{
         @include flex-container($justify:space-around);
@@ -56,20 +69,25 @@
 @include media-qry(small){
     @for $i from 1 through $grid-col-count{
         .grid__col--#{$i}{
-        width: 100%;
+        //width: 100%;
         text-align:left;
 
         }
     }
     @include gd_colors;
-    }
-    @include media-qry(large){ 
+    };
+
+
+
+
+    @include media-qry(medium){ 
         @for $i from 1 through $grid-col-count {
         $context: grid-context($grid-col-width, $grid-col-count, $grid-gutter-width) !global;
         $target: ($grid-col-width * $i) + ($grid-gutter-width * ($i - 1));
             .grid__col--#{$i}  {
             width: percentage($target / $context);
             text-align:center;
+            flex-grow:1;
             }  
     }
 };  
@@ -81,7 +99,7 @@
         margin-bottom:em(12px);
 
     };
-    @include media-qry(large){
+    @include media-qry(medium){
         @include doubly(percentage($grid-gutter-width / $context));
         float: left;
         min-height:1px;

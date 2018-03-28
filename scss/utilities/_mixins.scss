@@ -1,4 +1,11 @@
-;   
+// mixin for clearing
+@mixin clearfix{
+    &:after {
+        content: "";
+        display:table;
+        clear: both;
+    }
+}
 
 
 // mixin for generating background for grid background colors then button background colors.
@@ -7,15 +14,18 @@
         .grid__col--#{$theme}.theme__colors{
                 background-color:$color;
                 border-radius:$bdr-radius;
+               /*  flex-grow:1;
+                 @include doubly;  */
             } 
     };
  
 };
-// generate button colors
+// generate button colors   
 @mixin btn_colors{
 @each $theme, $color in $btn_colors{
  .btn--#{$theme}.theme__colors{
          background-color:$color;
+         
             }
 }
 }
@@ -73,7 +83,8 @@
     $flex-dir:null,
     $wrap:null,
     $justify:null,
-    $align-items:null){
+    $align-items:null,
+    $flex-basis:null){
         display: $display;
         flex-direction: $flex-dir;
         flex-wrap: $wrap;

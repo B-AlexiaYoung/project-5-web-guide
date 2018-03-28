@@ -1,15 +1,16 @@
-h1, h4, p{
-font: $font-stack;
-}
+/* h1, h4, p{
+font-family: $font-stack;
+} */
 
 .headline--secondary{
-    
+    font-family:$font-stack;
     margin-top: $mrgn-top;
     margin-bottom: $mrgn-bottom;
 
 }
 .headline--primary{
     @include media-qry(small){
+        font-family:$font-stack;
         color:$color-secondary;
         margin-top: $mrgn-top;
         margin-bottom: $mrgn-bottom;
