@@ -70,7 +70,6 @@
 @include media-qry(small){
     @for $i from 1 through $grid-col-count{
         .grid__col--#{$i}{
-        //width: 100%;
         text-align:left;
 
         }

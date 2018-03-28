@@ -141,45 +141,31 @@ div.grid__col--12 .button {
 
   .grid__col--3.theme__colors {
     background-color: #9D70BD;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--4.theme__colors {
     background-color: #61CDED;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--5.theme__colors {
     background-color: #20CF74;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--6.theme__colors {
     background-color: #3F96AB;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--7.theme__colors {
     background-color: #CF7872;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--8.theme__colors {
     background-color: #EE7C49;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ }
+    border-radius: 5px; }
 
   .grid__col--12.theme__colors {
     background-color: #7BBD9F;
-    border-radius: 5px;
-    /*  flex-grow:1;
-      @include doubly;  */ } }
+    border-radius: 5px; } }
 @media (min-width: 769px) {
   .grid__col--1 {
     width: 5.8558558559%;
@@ -392,13 +378,6 @@ div.grid__col--12 .button {
       .btn--info.theme__colors {
         margin-left: 8px; } }
 
-/*.btn--default,
-.btn-success,
-.btn-error,
-.btn-warning,
-.btn-info{
-    width:100vw;
-}  */
 .form {
   display: flex;
   flex-direction: column;
@@ -486,27 +465,12 @@ form.btn--default.theme__colors {
     .nav {
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      /*   &item {
-             @include flex-container($display: inline-flex);
-             
-              
-         }  */ } }
+      justify-content: center; } }
 
 @media (min-width: 769px) {
   .img--logo {
     margin-right: auto; } }
 
-/*.card{
-@include media-qry(small){
-    @include flex-container($flex-dir:column);
-}
-@include media-qry(large){
-    @include flex-container($flex-dir:row);
-}
-
-
-};  */
 a {
   padding-top: 10px;
   padding-left: 10px;

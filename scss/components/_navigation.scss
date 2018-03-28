@@ -21,11 +21,7 @@ font-family:$font-stack;
 
     @include media-qry(large){
         @include flex-container($flex-dir: row, $justify: center);
-         /*   &item {
-                @include flex-container($display: inline-flex);
-                
-                 
-            }  */
+         
     } 
 
 };
@@ -35,16 +31,7 @@ font-family:$font-stack;
     margin-right:auto}
 };
 
-/*.card{
-@include media-qry(small){
-    @include flex-container($flex-dir:column);
-}
-@include media-qry(large){
-    @include flex-container($flex-dir:row);
-}
 
-
-};  */
 a{
     @include spacing;
     

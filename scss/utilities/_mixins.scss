@@ -14,8 +14,7 @@
         .grid__col--#{$theme}.theme__colors{
                 background-color:$color;
                 border-radius:$bdr-radius;
-               /*  flex-grow:1;
-                 @include doubly;  */
+               
             } 
     };
  
@@ -44,19 +43,16 @@
 @mixin media-qry($break){
     @if $break == "small"{
         @media(min-width: $breakpoint-small){
-        // @include gd-colors; 
         @content;
     }
 }
 @else if $break =="medium"{
      @media(min-width: $breakpoint-medium){
-    //@include gd-colors;
      @content;
     }
 }
 @else if $break == "large"{
     @media(min-width: $breakpoint-large){
-        //@include gd-colors;
         
         @content;
     }
