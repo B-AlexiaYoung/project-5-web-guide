@@ -3,6 +3,8 @@
     @include flex-container( $flex-dir: column, $justify: flex-end);
     @include media-qry(medium){
         width:20vw;
+        text-align:center;
+        
     }
 }
 .form__input{
@@ -16,11 +18,11 @@
     border-right:none;
     @include media-qry(medium){
         display:block;
-        width:25vw;
+        width:19vw;
         //box-sizing:border-box;
         margin-left:10px;
     @include media-qry(large){
-        width:20vw;
+        width:17vw;
 
     }
     }
@@ -31,10 +33,12 @@ form.btn--default.theme__colors{
     border-radius: $bdr-radius;
     padding-top: $pd-top;
     margin-top: $mrgn-top;
-    margin:auto;
+    padding-left:$pd-left;
+    align-self:center;
     width:35vw;
     box-sizing:border-box;
     margin-left: 30px;
+    flex-grow:1;
 }
 .form__label--hidden{
     display: none;

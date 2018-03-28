@@ -13,7 +13,8 @@
     @include media-qry(large){
         margin-left: 75px;
         margin-right: 75px;
-        width:100vw;
+        
+        max-width:1800px;
     };
 
 };
@@ -114,7 +115,7 @@
         @include flex-container($justify: flex-start)
 
         }
-    @include media-qry(large){   
+    @include media-qry(medium){   
         @include flex-container($justify:center);
         }
 };

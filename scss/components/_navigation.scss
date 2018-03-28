@@ -55,6 +55,7 @@ a{
     margin: auto;}
     @include media-qry(medium){
         margin-left: 2em;
+        text-decoration:none;
     }
 };
 .nav__item{
